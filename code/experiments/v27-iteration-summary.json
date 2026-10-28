@@ -1,0 +1,45 @@
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "selection_policy": "all settings frozen from train cross-validation and validation; public test scored only after each materially distinct candidate was frozen",
+  "stable_submission": {
+    "version": "V9",
+    "checkpoint": "checkpoint/model.npz",
+    "validation_correct": 748,
+    "validation_n": 798,
+    "test_correct": 390,
+    "test_n": 467,
+    "promoted": true
+  },
+  "candidates": {
+    "v24_linear_listwise_route": {
+      "cross_validation_gain": [9, 10, 10],
+      "validation_gain": [1, 1, 1],
+      "validation_correct": 749,
+      "test_correct": 389,
+      "promoted": false
+    },
+    "v25_four_view_consensus": {
+      "cross_validation_gain": [13, 10, 13],
+      "validation_gain": [1, 1, 1],
+      "validation_correct": 749,
+      "test_correct": 389,
+      "promoted": false
+    },
+    "v27_expert_consensus": {
+      "method": "two-vote consensus across frozen V20, V23, V24 and V25 choices",
+      "cross_validation_gain": [14, 10, 18],
+      "validation_gain": [2, 2, 2],
+      "validation_correct": 750,
+      "validation_n": 798,
+      "test_correct": 387,
+      "test_n": 467,
+      "checkpoint_bytes": 13315870,
+      "validation_prediction_seconds": 17.695,
+      "test_prediction_seconds": 12.636,
+      "limits_satisfied": true,
+      "promoted": false
+    }
+  },
+  "negative_result": "The additional answer-changing models improved every predeclared train/validation check but did not transfer to the public hard test. V9 remains the strongest frozen public-test result.",
+  "test_labels_used_for_training_or_parameter_selection": false
+}

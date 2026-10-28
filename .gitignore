@@ -3,5 +3,9 @@ __pycache__/
 .venv/
 venv/
 runs/
+/.uv-cache/
+/tmp/
+/code/tmp/
+/experiments/
 .DS_Store
 Thumbs.db

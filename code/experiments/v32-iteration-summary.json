@@ -1,0 +1,50 @@
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "candidate": "program_search_v32",
+  "selection_policy": "Tune on train CV and validation only, freeze once, then run public test once for reporting.",
+  "method": {
+    "candidate_program_features": 19,
+    "maximum_question_numbers": 8,
+    "maximum_program_inputs": 5,
+    "search_beam": 60,
+    "listwise_semantic_dimension": 16,
+    "listwise_hidden_dimension": 12,
+    "listwise_blend": 1.5
+  },
+  "repeated_informative_results": [
+    {"salt": "", "v9_cv": 1755, "v32_cv": 1763, "gain": 8, "v9_validation": 305, "v32_validation": 309},
+    {"salt": "repeat-a", "v9_cv": 1753, "v32_cv": 1760, "gain": 7, "v9_validation": 304, "v32_validation": 310},
+    {"salt": "repeat-b", "v9_cv": 1741, "v32_cv": 1746, "gain": 5, "v9_validation": 304, "v32_validation": 309}
+  ],
+  "full_validation": {
+    "v9_correct": 748,
+    "v32_correct": 752,
+    "n": 798,
+    "v32_accuracy_percent": 94.23558897243107,
+    "paired_with_v9": {
+      "selected_answer_changes": 11,
+      "v9_wrong_to_v32_correct": 7,
+      "v9_correct_to_v32_wrong": 3,
+      "changed_with_same_correctness": 1
+    }
+  },
+  "frozen_public_test": {
+    "v9_correct": 390,
+    "v32_correct": 392,
+    "n": 467,
+    "v32_accuracy_percent": 83.94004282655246,
+    "prediction_seconds": 17.45036630006507
+  },
+  "resource_check": {
+    "four_thread_prediction_plus_scoring_wall_seconds": 18.234738,
+    "time_limit_seconds": 30,
+    "checkpoint_bytes": 5013724,
+    "additional_asset_limit_bytes": 16777216,
+    "passed": true
+  },
+  "checkpoint": {
+    "bytes": 5013724,
+    "sha256": "b384830a79de9d98e204d4273987b0ea7afaf0e84c008bdb0758a06d610af870"
+  },
+  "promoted": true
+}

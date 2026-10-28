@@ -1,0 +1,51 @@
+{
+  "measurement_date": "2026-10-27",
+  "local_hardware": {
+    "cpu": "AMD Ryzen 9 8945HX with Radeon Graphics",
+    "physical_cores": 16,
+    "logical_processors": 32,
+    "reference_cpu_is_authoritative": true
+  },
+  "software": {
+    "os": "Windows 11 10.0.26200",
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "scikit_learn": "1.9.1"
+  },
+  "thread_limits": {
+    "OMP_NUM_THREADS": 4,
+    "OPENBLAS_NUM_THREADS": 4,
+    "MKL_NUM_THREADS": 4
+  },
+  "training_and_search": {
+    "base_train_wall_seconds": 17.8383961,
+    "v9_export_wall_seconds": 13.2039369,
+    "v32_fresh_feature_search_wall_seconds": 257.0692126,
+    "v32_export_wall_seconds": 18.9976613,
+    "complete_reproduction_wall_seconds": 306.109207,
+    "fresh_program_cache_bytes": 1688628,
+    "random_feature_seed": 1,
+    "pca_random_state": 1,
+    "listwise_seed": 8200,
+    "fresh_export_prediction_equivalent": true,
+    "validation_choice_differences": 0,
+    "test_choice_differences": 0
+  },
+  "test_evaluation": {
+    "fresh_prediction_plus_independent_scoring_wall_seconds": 18.234738,
+    "runner_prediction_seconds": 17.591856100130826,
+    "scorer_seconds": 0.02974139992147684,
+    "complete_bank_questions": 467,
+    "correct": 392,
+    "accuracy_percent": 83.94004282655246,
+    "time_limit_seconds": 30,
+    "passed": true
+  },
+  "inference_assets": {
+    "files": ["checkpoint/model.npz"],
+    "uncompressed_bytes": 5013724,
+    "limit_bytes": 16777216,
+    "sha256": "b384830a79de9d98e204d4273987b0ea7afaf0e84c008bdb0758a06d610af870",
+    "passed": true
+  }
+}

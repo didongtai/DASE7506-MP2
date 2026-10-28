@@ -1,0 +1,52 @@
+{
+  "protocol": "dase7506-mp2-open-hard-verifier-v5",
+  "selection_policy": "train cross-validation plus validation; test used once after freezing V20",
+  "stable_submission": {
+    "version": "V9",
+    "checkpoint": "checkpoint/model.npz",
+    "validation_correct": 748,
+    "validation_n": 798,
+    "test_correct": 390,
+    "test_n": 467,
+    "promoted": true
+  },
+  "v20_candidate": {
+    "checkpoint": "runs/v20-multi-expert-router/model.npz",
+    "method": "V9 plus independently routed wide-kernel and expression-graph experts",
+    "cross_validation_informative": {
+      "default": {"v9": 1755, "v20": 1758},
+      "repeat_a": {"v9": 1753, "v20": 1756},
+      "repeat_b": {"v9": 1741, "v20": 1743}
+    },
+    "validation": {
+      "correct": 750,
+      "n": 798,
+      "accuracy": 93.98496240601504,
+      "v9_correct": 748
+    },
+    "test": {
+      "correct": 388,
+      "n": 467,
+      "accuracy": 83.08351177730192,
+      "v9_correct": 390
+    },
+    "resources": {
+      "checkpoint_bytes": 13274280,
+      "validation_prediction_seconds": 14.87,
+      "test_prediction_seconds": 9.76,
+      "limits_satisfied": true
+    },
+    "promoted": false,
+    "reason": "Robust train/validation gains did not transfer to the frozen public test; the stable V9 submission remains stronger."
+  },
+  "other_negative_results": [
+    "salt ensemble",
+    "rich expression kernel",
+    "symbolic hard-example weighting",
+    "pairwise tree ranker",
+    "TF-IDF verifier",
+    "generic error corrector",
+    "high-precision arithmetic template mining"
+  ],
+  "test_labels_used_for_training_or_parameter_selection": false
+}

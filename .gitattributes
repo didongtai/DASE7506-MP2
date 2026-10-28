@@ -1,0 +1,3 @@
+# The official checker hashes the raw dataset bytes.  Keep JSONL byte-exact on
+# Windows instead of allowing core.autocrlf to rewrite its line endings.
+code/data/**/*.jsonl -text
